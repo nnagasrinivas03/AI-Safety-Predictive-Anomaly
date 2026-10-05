@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        AI Safety Predictive Monitoring
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+
+<body>
+
+<div class="dashboard">
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div>
+
+            <h1>
+                AI SAFETY
+            </h1>
+
+            <p>
+                Predictive Anomaly Monitoring System
+            </p>
+
+        </div>
+
+
+        <div class="live-status">
+
+            <span id="liveDot"></span>
+
+            <span id="liveText">
+                CONNECTING
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN STATUS -->
+
+    <section class="system-status">
+
+        <div>
+
+            <p class="label">
+                SYSTEM STATUS
+            </p>
+
+            <h2 id="systemStatus">
+                WAITING
+            </h2>
+
+        </div>
+
+
+        <div>
+
+            <p class="label">
+                ANOMALY SCORE
+            </p>
+
+            <h2 id="anomalyScore">
+                --
+            </h2>
+
+        </div>
+
+
+        <div>
+
+            <p class="label">
+                LAST UPDATE
+            </p>
+
+            <h2 id="lastUpdate">
+                --
+            </h2>
+
+        </div>
+
+    </section>
+
+
+    <!-- SENSOR CARDS -->
+
+    <section class="sensor-grid">
+
+
+        <div class="sensor-card">
+
+            <span>
+                AIR TEMPERATURE
+            </span>
+
+            <strong id="airTemperature">
+                --
+            </strong>
+
+            <small>
+                Kelvin
+            </small>
+
+        </div>
+
+
+        <div class="sensor-card">
+
+            <span>
+                PROCESS TEMPERATURE
+            </span>
+
+            <strong id="processTemperature">
+                --
+            </strong>
+
+            <small>
+                Kelvin
+            </small>
+
+        </div>
+
+
+        <div class="sensor-card">
+
+            <span>
+                ROTATIONAL SPEED
+            </span>
+
+            <strong id="rotationalSpeed">
+                --
+            </strong>
+
+            <small>
+                RPM
+            </small>
+
+        </div>
+
+
+        <div class="sensor-card">
+
+            <span>
+                TORQUE
+            </span>
+
+            <strong id="torque">
+                --
+            </strong>
+
+            <small>
+                Nm
+            </small>
+
+        </div>
+
+
+        <div class="sensor-card">
+
+            <span>
+                TOOL WEAR
+            </span>
+
+            <strong id="toolWear">
+                --
+            </strong>
+
+            <small>
+                Minutes
+            </small>
+
+        </div>
+
+
+        <div class="sensor-card">
+
+            <span>
+                AI PREDICTION
+            </span>
+
+            <strong id="prediction">
+                --
+            </strong>
+
+            <small>
+                ML Classification
+            </small>
+
+        </div>
+
+    </section>
+
+
+    <!-- CHART -->
+
+    <section class="chart-container">
+
+        <div class="chart-header">
+
+            <div>
+
+                <h2>
+                    Live Sensor Monitoring
+                </h2>
+
+                <p>
+                    Real-time machine telemetry
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <canvas id="sensorChart"></canvas>
+
+    </section>
+
+
+    <!-- ALERT -->
+
+    <section
+        id="alertBox"
+        class="alert normal-alert"
+    >
+
+        <strong>
+            SYSTEM MONITORING
+        </strong>
+
+        <span id="alertMessage">
+            Waiting for sensor data...
+        </span>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        AI Safety Predictive Anomaly Detection
+
+        <span>
+            •
+
+            FastAPI
+
+            •
+
+            WebSocket
+
+            •
+
+            Machine Learning
+
+        </span>
+
+    </footer>
+
+</div>
+
+
+<script
+    src="/static/script.js">
+</script>
+
+</body>
+
+</html>
